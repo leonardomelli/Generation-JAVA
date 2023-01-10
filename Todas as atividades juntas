@@ -1,0 +1,119 @@
+//ATIVIDADE 01
+package Operações;
+import java.util.*;
+public class Atv01 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+
+        float salarioAtualf, abonof, novoSalariof;
+
+        System.out.println("Digite o salário:");
+        salarioAtualf = sc.nextFloat();
+        System.out.println("Digite o Abono:");
+        abonof = sc.nextFloat();
+        novoSalariof = salarioAtualf + abonof;
+        System.out.println("Seu novo salário: " + novoSalariof);
+
+
+        sc.close();
+
+     }
+    }
+    
+    
+//ATIVIDADE 02
+package Operações;
+import java.util.*;
+public class Atv02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float nota1,nota2,nota3,nota4,media;
+
+        System.out.println("Infome a nota 1: ");
+        nota1 = sc.nextFloat();
+        System.out.println("Infome a nota 2: ");
+        nota2 = sc.nextFloat();
+        System.out.println("Infome a nota 3: ");
+        nota3 = sc.nextFloat();
+        System.out.println("Infome a nota 4: ");
+        nota4 = sc.nextFloat();
+
+        media = (nota1 + nota2 + nota3 + nota4)/4;
+
+        System.out.printf("Média final: %.1f %n", media);
+
+
+
+
+
+        sc.close();
+    }
+}
+
+
+//ATIVIDADE 03
+package Operações;
+import java.util.*;
+public class Atv03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float salarioBruto,adcNoturno,hrEx,descontos,salarioLiquido;
+
+        System.out.println("Salário Bruto: ");
+        salarioBruto = sc.nextFloat();
+
+        System.out.println("Adicional Noturno: ");
+        adcNoturno = sc.nextFloat();
+
+        System.out.println("Horas Extras: ");
+        hrEx = sc.nextFloat();
+
+        System.out.println("Descontos: ");
+        descontos = sc.nextFloat();
+
+        salarioLiquido = salarioBruto + adcNoturno + (hrEx * 5) - descontos;
+
+        System.out.println("Salário Líquido: " + salarioLiquido);
+
+
+        sc.close();
+    }
+}
+
+
+
+//ATIVIDADE 04
+package Operações;
+import java.util.*;
+public class Atv04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        float n1,n2,n3,n4,df;
+
+        System.out.println("Informe número 01: ");
+        n1 = sc.nextFloat();
+
+        System.out.println("Informe número 02: ");
+        n2 = sc.nextFloat();
+
+        System.out.println("Informe número 03: ");
+        n3 = sc.nextFloat();
+
+        System.out.println("Informe número 04: ");
+        n4= sc.nextFloat();
+
+        df = (n1 * n2) - (n3 * n4);
+
+        System.out.println("Diferença: " + df);
+
+
+        sc.close();
+
+
+    }
+}
+
+
