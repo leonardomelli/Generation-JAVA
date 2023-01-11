@@ -1,30 +1,40 @@
-package Operações;
+package LaçosCondicionais;
+
 import java.util.*;
+
 public class Atv04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        float n1,n2,n3,n4,df;
+        /*Entrada:
+        leia a idade de uma pessoa (número inteiro)
+        Saida:
+        apresente na tela se a pessoa está ou não apta a votar e se seu voto é obrigatório ou
+        facultativo, conforme a tabela abaixo:
+         */
 
-        System.out.println("Informe número 01: ");
-        n1 = sc.nextFloat();
+        int idade;
 
-        System.out.println("Informe número 02: ");
-        n2 = sc.nextFloat();
+        System.out.println("Digite a idade: ");
+        idade = sc.nextInt();
 
-        System.out.println("Informe número 03: ");
-        n3 = sc.nextFloat();
+        if (idade >= 16 && idade < 18) {
 
-        System.out.println("Informe número 04: ");
-        n4= sc.nextFloat();
+            System.out.println("A pessoa está apta a votar e o voto é facultativo.");
 
-        df = (n1 * n2) - (n3 * n4);
+        } else if (idade >= 18 && idade < 65) {
 
-        System.out.println("Diferença: " + df);
+            System.out.println("A pessoa está apta a votar e o voto é obrigatório.");
+
+        } else if (idade >= 65) {
+
+            System.out.println("A pessoa está apta a votar e o voto é facultativo.");
+
+        } else {
+            System.out.println("A pessoa não está apta a votar.");
+        }
 
 
         sc.close();
-
-
     }
 }
