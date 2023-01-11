@@ -1,0 +1,325 @@
+//atividade 01
+
+package LaçosCondicionais;
+
+import java.util.*;
+
+public class Atv01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+         /*ENTRADA:
+         leia 3 valores int A, B e C
+         SAIDA:
+         e imprima na tela se a soma
+        de A + B é maior, menor ou igual a C.
+         */
+
+        System.out.println("Digite o número A: ");
+        int a = sc.nextInt();
+        System.out.println("Digite o número B: ");
+        int b = sc.nextInt();
+        System.out.println("Digite o número C: ");
+        int c = sc.nextInt();
+
+        int soma = a + b;
+
+        if (soma > c) {
+            System.out.println("A Soma de A + B é Maior do que C ");
+        } else if (soma < c) {
+            System.out.println("A Soma de A + B é Menor do que C ");
+        } else {
+
+            System.out.println("A Soma de A + B é Igual a C ");
+
+        }
+
+
+        sc.close();
+    }
+}
+
+
+//ATIVIDADE 02
+package LaçosCondicionais;
+
+import java.util.*;
+
+public class Atv02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*
+        ENTRADA:
+        leia um número inteiro via teclado
+        METODO:
+        indicando se este número é par ou ímpar e se o número
+        é positivo ou negativo.
+        SAIDA:
+        emostre na tela uma mensagem indicando se este número é par ou ímpar e se o número
+        é positivo ou negativo.
+         */
+
+
+        int num;
+
+        System.out.println("Digite um número: ");
+        num = sc.nextInt();
+
+        if (num > 0 && num % 2 == 0) {
+
+            System.out.println("O Número " + num + " é par e positivo!");
+
+        } else if (num < 0 && num % 2 == 0) {
+
+            System.out.println("O Número " + num + " é par e negativo!");
+
+        } else if (num > 0 && num % 2 != 0) {
+
+            System.out.println("O Número " + num + " é impar e positivo!");
+
+        } else if (num < 0 && num % 2 != 0) {
+
+            System.out.println("O Número " + num + " é impar e negativo!");
+
+        }
+
+        sc.close();
+    }
+}
+
+
+//ATIVIDADE 03
+package LaçosCondicionais;
+
+import java.util.*;
+
+public class Atv03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+   /*ENTRADA:
+    leia o código de um item
+   (número inteiro de 1 a 6) e a quantidade comprada deste item (número inteiro).
+   SAIDA:
+   A seguir, mostre na tela o valor total da conta e nome do produto que foi comprado.
+    */
+
+        String product;
+        int price;
+        int total;
+
+        System.out.println("Código do Produto: ");
+        int code = sc.nextInt();
+
+        System.out.println("Quantidade: ");
+        int quantity = sc.nextInt();
+
+
+        switch (code) {
+
+            case 01:
+                product = "Cachorro-quente";
+                price = 10;
+                total = price * quantity;
+                System.out.println("Produto: " + product);
+                System.out.println("Valor total: " + total);
+                break;
+
+            case 02:
+                product = "X-Salada";
+                price = 15;
+                total = price * quantity;
+                System.out.println("Produto: " + product);
+                System.out.println("Valor total: " + total);
+                break;
+
+            case 03:
+                product = "X-Bacon";
+                price = 18;
+                total = price * quantity;
+                System.out.println("Produto: " + product);
+                System.out.println("Valor total: " + total);
+                break;
+
+            case 04:
+                product = "Bauru";
+                price = 12;
+                total = price * quantity;
+                System.out.println("Produto: " + product);
+                System.out.println("Valor total: " + total);
+                break;
+
+            case 05:
+                product = "Refrigerante";
+                price = 8;
+                total = price * quantity;
+                System.out.println("Produto: " + product);
+                System.out.println("Valor total: " + total);
+                break;
+
+            case 06:
+                product = "Suco de laranja";
+                price = 13;
+                total = price * quantity;
+                System.out.println("Produto: " + product);
+                System.out.println("Valor total: " + total);
+                break;
+
+        }
+
+
+        sc.close();
+    }
+}
+
+//ATIVIDADE 04
+package LaçosCondicionais;
+
+import java.util.*;
+
+public class Atv04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*Entrada:
+        leia a idade de uma pessoa (número inteiro)
+        Saida:
+        apresente na tela se a pessoa está ou não apta a votar e se seu voto é obrigatório ou
+        facultativo, conforme a tabela abaixo:
+         */
+
+        int idade;
+
+        System.out.println("Digite a idade: ");
+        idade = sc.nextInt();
+
+        if (idade >= 16 && idade < 18) {
+
+            System.out.println("A pessoa está apta a votar e o voto é facultativo.");
+
+        } else if (idade >= 18 && idade < 65) {
+
+            System.out.println("A pessoa está apta a votar e o voto é obrigatório.");
+
+        } else if (idade >= 65) {
+
+            System.out.println("A pessoa está apta a votar e o voto é facultativo.");
+
+        } else {
+            System.out.println("A pessoa não está apta a votar.");
+        }
+
+
+        sc.close();
+    }
+}
+
+//ATIVIDADE 05
+package LaçosCondicionais;
+
+import java.util.*;
+
+public class Atv05 {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+
+    /*Entrada:
+    leia um valor com duas casas decimais, equivalente ao salário
+     de uma pessoa.
+     Metodo:
+     calcule e mostre o valor que esta pessoa deve pagar de Imposto de
+     Renda ou Isento, segundo a tabela abaixo:
+     */
+
+        System.out.println("Digite o Salário: R$ ");
+        double salario = sc.nextDouble();
+        double imposto;
+
+        if (salario >= 2000.00 && salario < 3000.00) {
+            imposto = (8.0/ 100) * salario;
+            System.out.println("Imposto de Renda: R$ " + imposto);
+        } else if (salario >= 3000.00 && salario < 4500.00) {
+            imposto = (18.0 / 100) * salario;
+            System.out.println("Imposto de Renda: R$ " + imposto);
+        } else if (salario > 4500.00) {
+            imposto = (28.0 / 100) * salario;
+            System.out.println("Imposto de Renda: R$ " + imposto);
+
+        } else {
+
+            System.out.println("Isento");
+
+        }
+
+
+        sc.close();
+    }
+}
+
+
+//ATIVIDADE 06
+package LaçosCondicionais;
+
+import java.util.*;
+
+public class Atv06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*Entrada:
+         leia 3 palavras (String), que definem as características
+         de um tipo de animal possível segundo o diagrama abaixo, que deve ser lido da esquerda
+         para a direita.
+         SAIDA:
+         Em seguida, mostre na tela qual dos animais foi escolhido, através das três palavras fornecidas:.
+         */
+        System.out.println("INFORME OS VALORES ABAIXO COM LETRA MINUSCOLA: ");
+        System.out.println("Tipo do animal: ");
+        String tipo = sc.next();
+        System.out.println("Especie do animal: ");
+        String especie = sc.next();
+        System.out.println("Dieta do animal: ");
+        String dieta = sc.next();
+
+        if (tipo.equals("vertebrado") && especie.equals("ave") && dieta.equals("carnivoro")) {
+
+            System.out.println("Águia");
+
+        } else if (tipo.equals("vertebrado") && especie.equals("ave") && dieta.equals("onivoro")) {
+
+            System.out.println("Pomba");
+
+        } else if (tipo.equals("vertebrado") && especie.equals("mamifero") && dieta.equals("onivoro")) {
+
+            System.out.println("Homem");
+
+        } else if (tipo.equals("vertebrado") && especie.equals("mamifero" ) && dieta.equals("herbivoro")) {
+
+            System.out.println("Vaca");
+
+        } else if (tipo.equals("invertebrado") && especie.equals("inseto") && dieta.equals("hematofago")) {
+
+            System.out.println("Pulga");
+
+        } else if (tipo.equals("invertebrado") && especie.equals("inseto") && dieta.equals("herbivoro")) {
+
+            System.out.println("Lagarta");
+
+        } else if (tipo.equals("invertebrado") && especie.equals("anelideo") && dieta.equals("hematofago")) {
+
+            System.out.println("Sanguessuga");
+
+        } else if (tipo.equals("invertebrado")  && especie.equals("anelideo")  && dieta.equals("onivoro") ) {
+
+            System.out.println("Minhoca");
+
+        } else {
+
+            System.out.println("Esse animal não existe!!! SERÁ UM POKÉMON????");
+
+        }
+
+
+        sc.close();
+    }
+}
