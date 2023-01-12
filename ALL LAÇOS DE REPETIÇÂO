@@ -1,0 +1,356 @@
+//ATIVIDADE 01
+package LaçosDeRepetição;
+
+import java.util.Scanner;
+
+
+public class Repeticao01 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*Entrada (V)
+        leia 2 números inteiros via teclado,
+        Metodo: (V)
+        onde o primeiro número
+        deve ser menor que o segundo número. Caso contrário, deve ser exibida uma mensagem na tela
+        informando que o intervalo é inválido e sair do programa.
+        Dentro do intervalo informado,
+         Saida: (V)
+         mostre na tela todes os números que são múltiplos de 3 e 5.
+        Veja os exemplos abaixo:
+        */
+
+        int num1, num2;
+
+        System.out.println("Digite o primeiro número do intervalo: ");
+        num1 = sc.nextInt();
+        System.out.println("Digite o último número do intervalo: ");
+        num2 = sc.nextInt();
+        if (num1 > num2) {
+
+            System.out.println("Intervalo inválido!");
+
+        } else {
+
+            for (int i = num1; i <= num2; i++) {
+
+                if (i % 3 == 0) {
+
+                    System.out.println(i + " é múltiplo de 5 e 3");
+
+
+
+                }
+            }
+        }
+    }
+    
+    
+//ATIVIDADE 02
+package LaçosDeRepetição;
+
+import java.util.*;
+
+public class Repeticao02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*Entrada:
+         leia 10 números inteiros via teclado (V)
+         Metodo:
+         quantos números são pares e quantos número são ímpares.(V)
+         Saida:
+         mostre na tela
+         quantos números são pares e quantos número são ímpares. (V)
+         */
+
+        int impares = 0;
+        int pares = 0;
+        int num;
+
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.println("Digite o " + i + "º" + " número: ");
+            num = sc.nextInt();
+            if (num % 2 == 0) {
+
+                pares ++;
+
+            }
+            else {
+
+                impares ++;
+
+
+            }
+
+
+        }
+        System.out.println("Total de números pares: " + pares);
+        System.out.println("Total de números ímpares: " + impares);
+
+        sc.close();
+    }
+}
+
+//ATIVIDADE 03
+package LaçosDeRepetição;
+import java.util.*;
+public class Repeticao03 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        /*Entrada: (V)
+         leia a idade de várias pessoas (números inteiros)
+         EXEMPLO: Digite uma idade:
+         SAIDA: (V)
+         mostre na tela o total de pessoas cuja idade seja menor que 21 anos e
+         o total de pessoas cuja idade seja maior que 50 anos.
+         EXEMPLO:
+         Total de pessoas menores de 21 anos: 5
+         Total de pessoas maiores de 50 anos: 3
+          SAIDA DO WHILE (V)
+          A leitura dos dados deve ser
+          finalizada ao digitar uma idade negativa.
+         */
+
+        int idade = 0;
+        int menor = 0;
+        int maior = 0;
+
+        while (idade >= 0) {
+
+            System.out.println("Digite uma idade: ");
+            idade = sc.nextInt();
+
+            if (idade > 0 && idade < 21) {
+                menor++;
+
+            }
+
+            else if (idade > 50) {
+
+                maior++;
+
+            }
+
+
+
+
+
+        }
+
+        System.out.println("Total de pessoas menores de 21 anos: " + menor);
+        System.out.println("Total de pessoas maiores de 50 anos: " + maior);
+
+    }
+}
+
+
+//ATIVIDADE 04
+
+package LaçosDeRepetição;
+
+import java.util.*;
+
+public class Repeticao04 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*Entrada:
+        leia via teclado as seguintes informações de cada colaborador:
+Idade (Número inteiro) (V)
+Sexo (Número Inteiro):(V)
+1 – Masculino
+2 – Feminino
+3 – Outros
+Categoria (Número Inteiro): (V)
+1 – Backend
+2 – Frontend
+3 – Mobile
+4 – FullStack
+EXEMPLO
+Digite a Idade: 21
+Digite o Sexo: 2
+Digite a Categoria: 1
+Deseja continuar (S/N): S
+Saida da estrutura while: (V)
+ perguntar ao usuário se ele deseja continuar a
+ leitura dos dados de um novo colaboradore ou não (S/N).
+ SAIDA: (V)
+Total de pessoas desenvolvedoras Backend: 2
+Total de mulheres desenvolvedoras Frontend: 1
+Total de homens desenvolvedores Mobile maiores de 40 anos: 1
+Total de mulheres desenvolvedoras FullStack menores de 30 anos: 1
+         */
+
+        String saida = "S";
+        int backend = 0;
+        int frontend = 0, mobile = 0, fullstack = 0;
+
+        while (saida.equals("S")) {
+
+            System.out.println("Digite a Idade: ");
+            int idade = sc.nextInt();
+
+            System.out.println("Digite o Sexo: ");
+            int sexo = sc.nextInt();
+            String tipoSexo = null;
+
+            System.out.println("Digite a Categoria: ");
+            int categoria = sc.nextInt();
+            String tipoCategoria = null;
+
+            switch (sexo) {
+
+                case 1:
+                    tipoSexo = ("Masculino");
+                    break;
+                case 2:
+                    tipoSexo = ("Feminino");
+                    break;
+
+                case 3:
+                    tipoSexo = ("Outros");
+                    break;
+            }
+
+            switch (categoria) {
+
+                case 1:
+                    tipoCategoria = ("Backend");
+                    backend++;
+                    break;
+                case 2:
+                    tipoCategoria = ("Frontend");
+                    break;
+
+                case 3:
+                    tipoCategoria = ("Mobile");
+                    break;
+                case 4:
+                    tipoCategoria = ("FullStack");
+                    break;
+
+            }
+
+            if (tipoSexo.equals("Feminino") && tipoCategoria.equals("Frontend")) {
+
+                frontend++;
+
+            } else if (tipoSexo.equals("Masculino") && idade > 40 && tipoCategoria.equals("Mobile")) {
+
+                mobile++;
+
+            } else if (tipoSexo.equals("Feminino") && idade < 30 && tipoCategoria.equals("FullStack")) {
+
+                fullstack++;
+
+            }
+
+            System.out.println("Deseja continuar (S/N): ");
+            saida = sc.next();
+        }
+
+        System.out.println("Total de pessoas desenvolvedoras Backend: " + backend);
+        System.out.println("Total de mulheres desenvolvedoras Frontend: " + frontend);
+        System.out.println("Total de homens desenvolvedores Mobile maiores de 40 anos: " + mobile);
+        System.out.println("Total de mulheres desenvolvedoras FullStack menores de 30 anos: " + fullstack);
+
+
+        sc.close();
+    }
+    
+    
+    
+    //ATIVIDADE 05
+
+package LaçosDeRepetição;
+import java.util.*;
+public class Repeticao05 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*Entrada: (V)
+        leia números inteiros via teclado
+        exemplo: Digite um número:
+        Saida do laço: (V)
+        até que o número
+        zero seja digitado.
+        Saida:
+       mostre na tela a soma de todos os números digitados, que sejam
+       positivos.
+       A soma dos números positivos é:
+         */
+
+        int num, soma = 0;
+
+        do {
+            System.out.println("Digite um número: ");
+            num = sc.nextInt();
+
+            if (num > 0) {
+
+                soma += num;
+
+            }
+
+
+        } while (num != 0);
+        System.out.println("A soma dos números positivos é: " + soma);
+
+
+        sc.close();
+    }
+}
+
+
+
+//ATIVIDADE 06
+
+package LaçosDeRepetição;
+import java.util.Scanner;
+
+public class Repeticao06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        /*Entrada:
+        leia números inteiros via teclado.
+        exemplo:
+            Digite um número:
+        Saida do laço:
+        até que o número
+        zero seja digitado.
+         Saida:
+        mostre na tela a média de todos os números digitados, que
+         sejam múltiplos de 3. Veja o exemplo abaixo:
+         exemplo:
+         A média de todos os números múltiplos de 3 é: 7.5
+         */
+
+        int num,soma = 0,i = 0;
+        double media;
+
+
+        do{
+
+            System.out.println("Digite um número: ");
+            num = sc.nextInt();
+
+
+            if(num % 3 == 0 && num != 0){
+
+                soma = soma + num;
+                i ++;
+
+            }
+
+
+
+        }while (num != 0);
+
+        media = soma / i;
+
+        System.out.println("A média de todos os números múltiplos de 3 é: " + media);
+
+    }
+}    
