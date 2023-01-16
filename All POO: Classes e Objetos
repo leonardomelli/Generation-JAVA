@@ -69,7 +69,7 @@ public class Cliente {
 }
 
 
-//TESTE CLASSE
+//TESTE CLASSE:
 package Clientes;
 
 public class TesteCliente {
@@ -345,7 +345,7 @@ public class Farmacia {
     }
 }
 
-//TESTE CLASSE
+//TESTE CLASSE:
 package farmacias;
 
 public class TesteFarmacia {
@@ -429,7 +429,7 @@ public class Ingresso {
 
 }
 
-//TESTE CLASSE
+//TESTE CLASSE:
 package ingressos;
 
 public class TesteIngresso {
@@ -511,7 +511,7 @@ public class curso {
 
 }
 
-//TESTE CLASSE
+//TESTE CLASSE:
 package faculdade;
 
 public class TesteCurso {
