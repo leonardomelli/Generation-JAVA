@@ -1,0 +1,134 @@
+//Classe Cliente
+//Atividade 01
+package Clientes;
+
+public class Cliente {
+
+    protected String nome;
+    protected String telefone;
+
+
+    public Cliente(String nome, String telefone) {
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+
+    }
+
+
+}
+
+
+//Classe Pessoa Juridica
+
+package Clientes;
+
+public class PessoaJuridica extends Cliente{
+
+    private String cnpj;
+
+    public PessoaJuridica(String nome, String telefone, String cnpj) {
+        super(nome, telefone);
+        this.cnpj = cnpj;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+    public void visualizar(){
+
+        System.out.println("Nome: " + getNome() + "\nTelefone: " + getTelefone() + "\nCnpj: " + getCnpj() );
+
+
+    }
+}
+
+//Classe Pessoa Fisica 
+
+package Clientes;
+
+public class PessoaFisica extends Cliente{
+    protected String cpf;
+    protected String email;
+
+    public PessoaFisica(String nome, String telefone, String cpf, String email) {
+        super(nome, telefone);
+        this.cpf = cpf;
+        this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void visualizar(){
+
+        System.out.println("Nome: " + getNome() + "\nTelefone: " + getTelefone() + "\nCpf: " + getCpf() + "\nEmail: " + email);
+
+
+    }
+
+}
+
+//Classe teste
+
+package Clientes;
+
+public class TesteCliente {
+    public static void main(String[] args) {
+        PessoaFisica leonardo = new PessoaFisica("Leonardo","(11)9954788","145.4587.455=44","leonardo@gmail.com");
+        PessoaFisica calvin = new PessoaFisica("Calvin","(11)9954589","156.8745.554-55","Calvin@gmail.com");
+
+        PessoaJuridica meli = new PessoaJuridica("Mercado livre","(11)22545454","444.454.444-78");
+        PessoaJuridica gen = new PessoaJuridica("GeneratiON","(11)95645445","555.333.777-87");
+
+
+        System.out.println("PESSOA FISICA:");
+        calvin.visualizar();
+        leonardo.visualizar();
+        System.out.println("\n");
+        System.out.println("PESSOA JURIDICA:");
+        gen.visualizar();
+        meli.visualizar();
+
+
+
+
+
+    }
+}
+
+
+
+
